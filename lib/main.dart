@@ -18,7 +18,7 @@ void main() {
     const ProviderScope(
       child: App(),
     ),
-  );
+   );
 }
 
 class App extends StatelessWidget {

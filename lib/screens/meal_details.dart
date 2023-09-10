@@ -19,31 +19,45 @@ class MealDetail extends ConsumerWidget {
         title: Text(meal.title),
         actions: [
           IconButton(
-            onPressed: () {
-              /// calling functions which are written inside the riverpod provider
-              final isAdded = ref
-                  .read(favouriteMealsProvider.notifier)
-                  .toggleMealFavouriteStatus(meal);
+              onPressed: () {
+                /// calling functions which are written inside the riverpod provider
+                final isAdded = ref
+                    .read(favouriteMealsProvider.notifier)
+                    .toggleMealFavouriteStatus(meal);
 
-              ScaffoldMessenger.of(context).clearSnackBars();
-              SnackBar snackBar = SnackBar(
-                  content: Text(isAdded ? "Meal Added" : "Meal  Removed"));
-              ScaffoldMessenger.of(context).showSnackBar(snackBar);
-            },
-            icon: isFavourite
-                ? Icon(Icons.star, color: Theme.of(context).colorScheme.onPrimaryContainer,)
-                : const Icon(Icons.star_border_outlined),
-          ),
+                ScaffoldMessenger.of(context).clearSnackBars();
+                SnackBar snackBar = SnackBar(
+                    content: Text(isAdded ? "Meal Added" : "Meal  Removed"));
+                ScaffoldMessenger.of(context).showSnackBar(snackBar);
+              },
+              icon: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  return RotationTransition(
+                    turns: animation,
+                    child: child,
+                  );
+                },
+                child: Icon(
+                  isFavourite ? Icons.star : Icons.star_border,
+                  key: ValueKey(
+                   isFavourite,
+                  ),
+                ),
+              ))
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              meal.imageUrl,
-              height: 300,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            Hero(
+              tag: meal.id,
+              child: Image.network(
+                meal.imageUrl,
+                height: 300,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
             const SizedBox(
               height: 14,
