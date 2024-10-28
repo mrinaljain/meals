@@ -76,7 +76,7 @@ class MealDetail extends ConsumerWidget {
               Text(
                 ingredient,
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: Theme.of(context).colorScheme.onBackground),
+                    color: Theme.of(context).colorScheme.onSurface),
               ),
             const SizedBox(
               height: 14,
@@ -98,7 +98,7 @@ class MealDetail extends ConsumerWidget {
                 child: Text(
                   step,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                      color: Theme.of(context).colorScheme.onBackground),
+                      color: Theme.of(context).colorScheme.onSurface),
                 ),
               ),
           ],

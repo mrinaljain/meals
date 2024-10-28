@@ -40,14 +40,14 @@ class FilterScreen extends ConsumerWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             subtitle: Text(
               'Only Gluten Free meals',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -67,14 +67,14 @@ class FilterScreen extends ConsumerWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             subtitle: Text(
               'Only Lactos Free meals',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -94,14 +94,14 @@ class FilterScreen extends ConsumerWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             subtitle: Text(
               'Only Vegiterian meals',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
@@ -121,14 +121,14 @@ class FilterScreen extends ConsumerWidget {
               style: Theme.of(context)
                   .textTheme
                   .titleLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             subtitle: Text(
               'Only Vegan Free meals',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
-                  .copyWith(color: Theme.of(context).colorScheme.onBackground),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             activeColor: Theme.of(context).colorScheme.tertiary,
             contentPadding: const EdgeInsets.only(left: 34, right: 22),
